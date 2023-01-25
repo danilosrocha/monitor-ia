@@ -1,5 +1,13 @@
-firebase.auth().signOut().then(() => {
-    // Sign-out successful.
-}).catch((error) => {
-    // An error happened.
-});
+import { auth } from "./firebase.config";
+
+const logoutEmailAndPassword = async () => {
+    auth.signOut().then(() => {
+        console.log("Logout successful");
+    }).catch((error) => {
+        console.log(error);
+    });
+};
+
+export default logoutEmailAndPassword;
+
+

@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import SignUp from "./SignUp.layout"
 import { NavigationProp, useNavigation } from "@react-navigation/native";
+import registerWithEmailAndPassword from "../../../services/firebase/signUp";
 
 type Navigation = NavigationProp<Record<string, object | undefined>, string>;
 
@@ -11,16 +12,21 @@ const SignUpController = () => {
     const [password, setPassword] = useState("")
 
     async function handleRegister() {
-        alert(" ----> handleSignIn ")
+        const result = await registerWithEmailAndPassword({ email, password })
+        if (result) {
+            setEmail("")
+            setPassword("")
+            navigation.navigate("Home")
+        }
     }
 
 
-    async function handleGoBack() {
-        alert(" ----> handleSignUp ")
-        navigation.navigate("SignUp")
+    function handleGoBack() {
+        navigation.goBack()
     }
 
     const variables = {
+        name,
         email,
         password,
     }
@@ -28,6 +34,7 @@ const SignUpController = () => {
     const handlers = {
         handleRegister,
         handleGoBack,
+        setName,
         setEmail,
         setPassword,
     }

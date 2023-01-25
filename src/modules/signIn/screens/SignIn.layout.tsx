@@ -72,6 +72,7 @@ const SignIn = ({ variables, handlers }: LayoutPropsType) => {
                         </Link>
 
                     </HStack>
+                    
                 </VStack>
             </Box>
         </Center >

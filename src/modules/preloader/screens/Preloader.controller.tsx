@@ -9,9 +9,11 @@ const PreloaderController = () => {
 
     useEffect(() => {
         const handleGoToSignIn = () => {
-            navigation.navigate("SignIn")
+            setTimeout(function () {
+                navigation.navigate("SignIn")
+            }, 3000);
         }
-        setInterval(handleGoToSignIn, 2000);
+        handleGoToSignIn();
     }, []);
 
     return (

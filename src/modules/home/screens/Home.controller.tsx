@@ -1,16 +1,21 @@
 import React, { useState } from "react"
-import SignIn from "./SignIn.layout"
 import { NavigationProp, useNavigation } from "@react-navigation/native";
+import Home from "./Home.layout";
+import logoutEmailAndPassword from "../../../services/firebase/LogOut";
+import { auth } from "../../../services/firebase/firebase.config";
 
 type Navigation = NavigationProp<Record<string, object | undefined>, string>;
 
-const SignInController = () => {
+const HomeController = () => {
     const navigation: Navigation = useNavigation();
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
-    async function handleSignIn() {
-        alert(" ----> handleSignIn ")
+    console.log(auth.currentUser);
+
+    async function handleLogout() {
+        await logoutEmailAndPassword();
+        navigation.navigate("SignIn")
     }
 
     async function handleForgetPassword() {
@@ -28,16 +33,14 @@ const SignInController = () => {
     }
 
     const handlers = {
-        handleSignIn,
-        handleForgetPassword,
-        handleSignUp,
+        handleLogout,
         setEmail,
         setPassword,
     }
 
     return (
         <>
-            <SignIn
+            <Home
                 handlers={handlers}
                 variables={variables}
             />
@@ -45,5 +48,5 @@ const SignInController = () => {
     )
 }
 
-export default SignInController
+export default HomeController
 

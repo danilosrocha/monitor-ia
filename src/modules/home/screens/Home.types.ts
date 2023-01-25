@@ -11,14 +11,12 @@ export type VariablesType = {
 };
 
 export type HandlersType = {
-    handleSignIn: () => void,
-    handleForgetPassword: () => void,
-    handleSignUp: () => void,
+    handleLogout: () => void,
     setEmail: Dispatch<SetStateAction<string>>,
     setPassword: Dispatch<SetStateAction<string>>
 };
 
-export type SignInTextType = {
+export type HomeTextType = {
     title: string,
     email: string,
     password: string,
