@@ -1,6 +1,6 @@
-import { LoginTextType } from "./login.types";
+import { SignInTextType } from "./SignUp.types";
 
-const textLogin: LoginTextType = {
+const textSignIn: SignInTextType = {
     title: "BarberPRO - Faça login para acessar",
     email: 'Digite seu email',
     password: "Digite sua senha",
@@ -9,4 +9,4 @@ const textLogin: LoginTextType = {
     linkTextStrong: "Cadastre-se",
 };
 
-export default textLogin;
+export default textSignIn;

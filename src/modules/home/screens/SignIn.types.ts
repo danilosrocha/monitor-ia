@@ -1,8 +1,8 @@
 import { Dispatch, SetStateAction } from "react";
 
 export type LayoutPropsType = {
-    variables?: VariablesType
-    handlers?: HandlersType
+    variables: VariablesType
+    handlers: HandlersType
 };
 
 export type VariablesType = {
@@ -11,12 +11,14 @@ export type VariablesType = {
 };
 
 export type HandlersType = {
-    handleLogin: () => void,
+    handleSignIn: () => void,
+    handleForgetPassword: () => void,
+    handleSignUp: () => void,
     setEmail: Dispatch<SetStateAction<string>>,
     setPassword: Dispatch<SetStateAction<string>>
 };
 
-export type LoginTextType = {
+export type SignInTextType = {
     title: string,
     email: string,
     password: string,
