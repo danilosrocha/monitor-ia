@@ -12,8 +12,11 @@ const SignUpController = () => {
     const [password, setPassword] = useState("")
 
     async function handleRegister() {
-        const result = await registerWithEmailAndPassword({ email, password })
+        const result = await registerWithEmailAndPassword({ name, email, password })
+
+
         if (result) {
+            setName("")
             setEmail("")
             setPassword("")
             navigation.navigate("Home")

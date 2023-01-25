@@ -14,10 +14,10 @@ const SignInController = () => {
     async function handleSignIn() {
         const result = await loginWithEmailAndPassword({ email, password })
         if (result) {
-            setEmail("")
-            setPassword("")
             if (auth.currentUser?.emailVerified) {
                 navigation.navigate("Home")
+                setEmail("")
+                setPassword("")
             } else {
                 alert("Verifique seu email para logar")
             }

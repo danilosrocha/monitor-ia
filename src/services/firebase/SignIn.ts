@@ -1,7 +1,7 @@
-import { VariablesType } from './firebase.types';
+import { VariablesTypeSignIn } from './firebase.types';
 import { auth } from "./firebase.config";
 
-const loginWithEmailAndPassword = async ({ email, password }: VariablesType) => {
+const loginWithEmailAndPassword = async ({ email, password }: VariablesTypeSignIn) => {
     let login = false
     await auth.signInWithEmailAndPassword(email, password)
         .then((userCredential) => {

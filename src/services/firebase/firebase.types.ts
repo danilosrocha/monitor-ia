@@ -1,9 +1,10 @@
-export type LayoutPropsType = {
-    variables: VariablesType
+export type VariablesTypeSignIn = {
+    email: string,
+    password: string,
 };
 
-export type VariablesType = {
-    name?: string,
+export type VariablesTypeSignUp = {
+    name: string,
     email: string,
     password: string,
 };

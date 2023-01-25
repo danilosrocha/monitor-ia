@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { NavigationProp, useNavigation } from "@react-navigation/native";
 import Home from "./Home.layout";
-import logoutEmailAndPassword from "../../../services/firebase/LogOut";
+import logoutEmailAndPassword from "../../../services/firebase/logOut";
 import { auth } from "../../../services/firebase/firebase.config";
 
 type Navigation = NavigationProp<Record<string, object | undefined>, string>;
