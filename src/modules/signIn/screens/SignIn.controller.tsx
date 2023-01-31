@@ -15,7 +15,7 @@ const SignInController = () => {
         const result = await loginWithEmailAndPassword({ email, password })
         if (result) {
             // if (auth.currentUser?.emailVerified) {
-            navigation.navigate("MainTab")
+            navigation.navigate("MyDrawer")
             setEmail("")
             setPassword("")
             // } else {

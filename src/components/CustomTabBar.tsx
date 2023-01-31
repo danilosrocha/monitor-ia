@@ -43,7 +43,7 @@ const CustomTabBar = ({ state, navigation }: any) => {
 
     return (
         <TabArea>
-            <TabSmallItem onPress={() => goTo("Home")}>
+            <TabSmallItem onPress={() => goTo("MyDrawer")}>
                 <Icon name="home" size={40} />
             </TabSmallItem>
 

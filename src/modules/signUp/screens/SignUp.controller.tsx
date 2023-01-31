@@ -18,7 +18,7 @@ const SignUpController = () => {
             setName("")
             setEmail("")
             setPassword("")
-            navigation.navigate("MainTab")
+            navigation.navigate("MyDrawer")
         }
     }
 

@@ -6,7 +6,7 @@ const Drawer = createDrawerNavigator();
 
 const MyDrawer = () => {
     return (
-        <Drawer.Navigator initialRouteName="Home" screenOptions={{
+        <Drawer.Navigator initialRouteName="MainTab" screenOptions={{
             headerShown: false,
         }}>
             <Drawer.Screen name="MainTab" component={MainTab} />
