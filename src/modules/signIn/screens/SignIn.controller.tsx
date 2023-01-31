@@ -14,13 +14,13 @@ const SignInController = () => {
     async function handleSignIn() {
         const result = await loginWithEmailAndPassword({ email, password })
         if (result) {
-            if (auth.currentUser?.emailVerified) {
-                navigation.navigate("Home")
-                setEmail("")
-                setPassword("")
-            } else {
-                alert("Verifique seu email para logar")
-            }
+            // if (auth.currentUser?.emailVerified) {
+            navigation.navigate("MainTab")
+            setEmail("")
+            setPassword("")
+            // } else {
+            // alert("Verifique seu email para logar")
+            // }
         }
     }
 

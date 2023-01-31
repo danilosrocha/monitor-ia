@@ -11,8 +11,6 @@ const HomeController = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
-    console.log(auth.currentUser);
-
     async function handleLogout() {
         await logoutEmailAndPassword();
         navigation.navigate("SignIn")

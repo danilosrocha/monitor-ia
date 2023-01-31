@@ -10,11 +10,9 @@ const loginWithEmailAndPassword = async ({ email, password }: VariablesTypeSignI
             console.log("Logado com o email: ", user?.email);
         })
         .catch((error) => {
-            const errorCode = error.code;
             const errorMessage = error.message;
             alert(errorMessage)
         });
-    console.log(login);
 
     return login;
 };

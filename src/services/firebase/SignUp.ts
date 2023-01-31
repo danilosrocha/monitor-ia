@@ -20,7 +20,7 @@ const registerWithEmailAndPassword = async ({ name, email, password }: Variables
       alert(errorMessage)
       return false
     });
-  console.log("--->", result);
+
   if (result) {
     const result = handleRegisterClick(name)
     return result
@@ -28,7 +28,7 @@ const registerWithEmailAndPassword = async ({ name, email, password }: Variables
   return result;
 };
 
-const handleRegisterClick = (name) => {
+const handleRegisterClick = (name: any) => {
 
   const colect = db.collection("Users")
   const newDoc = colect.doc(auth.currentUser?.uid)

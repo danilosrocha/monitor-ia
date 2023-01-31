@@ -14,12 +14,11 @@ const SignUpController = () => {
     async function handleRegister() {
         const result = await registerWithEmailAndPassword({ name, email, password })
 
-
         if (result) {
             setName("")
             setEmail("")
             setPassword("")
-            navigation.navigate("Home")
+            navigation.navigate("MainTab")
         }
     }
 
